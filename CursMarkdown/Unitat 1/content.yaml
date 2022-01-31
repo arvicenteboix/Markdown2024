@@ -1,0 +1,12 @@
+title: Unitat 01. Introducció a Markdwown
+output: UD01.IntroMD
+sections:
+  - section:
+      title: 1. El llenguatge Markdown
+      doc: 1.Markown.md
+  - section:
+      title: 2. Edició de fitxers amb Markdown
+      doc: 2.Edicio.md
+  - section:
+      title: 3. Correcció orgogràfica
+      doc: 3.Corrector.md
