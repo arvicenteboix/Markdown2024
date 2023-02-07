@@ -6,7 +6,7 @@ theme: default
 paginate: true
 _paginate: false
 header: 'Presentacions utilitzant markdown/Marp'
-footer: 'CEFIRE València - Curs 21/22'
+footer: 'CEFIRE València - Curs 22/23'
 backgroundImage: url('images/prova2.png')
 style: |
   h1{
