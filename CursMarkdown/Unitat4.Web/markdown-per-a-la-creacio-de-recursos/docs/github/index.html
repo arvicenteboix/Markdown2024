@@ -1,0 +1,587 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+    
+    
+      
+        <title>Allotgem la web a github - Web estàtica amb mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2e8b5541.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#allotgem-la-nostra-web-al-servidor-de-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Web estàtica amb mkdocs" class="md-header__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web estàtica amb mkdocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Allotgem la web a github
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web estàtica amb mkdocs" class="md-nav__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Web estàtica amb mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccio/" class="md-nav__link">
+        Introducció i  intal·lació
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracio/" class="md-nav__link">
+        Configuració
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aules/" class="md-nav__link">
+        Allotgem la web a Aules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Allotgem la web a github
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Allotgem la web a github
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-sistema-de-control-de-versions" class="md-nav__link">
+    Què és un sistema de control de versions?
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és un sistema de control de versions?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aleshores-que-es-github" class="md-nav__link">
+    Aleshores, què és Github?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aules%20vs%20github/" class="md-nav__link">
+        Docència: Aules o github?
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-sistema-de-control-de-versions" class="md-nav__link">
+    Què és un sistema de control de versions?
+  </a>
+  
+    <nav class="md-nav" aria-label="Què és un sistema de control de versions?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aleshores-que-es-github" class="md-nav__link">
+    Aleshores, què és Github?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="github.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+                
+                  
+
+
+<h1 id="allotgem-la-nostra-web-al-servidor-de-github">Allotgem la nostra web al servidor de github</h1>
+<h2 id="que-es-un-sistema-de-control-de-versions">Què és un sistema de control de versions?</h2>
+<p>Per a entendre què és Github, necessitem conéixer dos conceptes relacionats:</p>
+<ul>
+<li>Sistema de control de versions</li>
+<li>Git</li>
+</ul>
+<p>Un <em>sistema de control de versions</em> ajuda els desenvolupadors de contingut a rastrejar i gestionar els canvis que es produeixen en un projecte. És àmpliament utilitzat en el desenvolupament de <em>software</em>, però el podem aplicar a altres àmbits, com l'àmbit docent, per a gestionar els nostres apunts. </p>
+<p>Anem a veure un exemple ...</p>
+<p>Imaginem que som desenvolupadors que col·laborem en el desenvolupament de <a href="https://wordpress.com/es/">WordPress</a>. Si un dels desenvolupadors volgués treballar en una de les parts del codi de WordPress, no seria segur ni eficaç que editara directament el codi font "oficial".</p>
+<p>En lloc d'això, el control de versions permet als desenvolupadors treballar amb seguretat mitjançant <em>ramificacions</em> i <em>fusions</em>.</p>
+<p>Amb la ramificació, un desenvolupador duplica el codi font (anomenat repositori) al seu ordinador. Aleshores, el desenvolupador pot fer canvis en aquesta part del codi sense afectar la resta del projecte.</p>
+<p>Una vegada el desenvolupador ha provat i aconsegueix que la seua part del codi funcione correctament, pot incloure els seus canvis al projecte, és a dir, fusionar aquest codi amb el codi font principal per fer-lo oficial.</p>
+<p>El <em>sistema de control</em>, ens permet aleshores veure quins canvis s'han produït, revertir-los, incloure'ls, tornar a una versió anterior...</p>
+<p>Un altre exemple de control de versions el podem observar en els documents de Google Suite. Per veure les diferents versions que tenim d'un document, podem accedir fent clic a l'enllaç on indica quan s'ha guardat la <em>última</em> modificació que hem fet al document.</p>
+<p><img alt="GSuite: obrir control de versions" src="../img/github/control-version-gsuite.png" /></p>
+<p>Ens apareix una finestra on tenim les diferents versions que s'han anat guardant del document. També podem veure, en verd, què s'ha inclós al document des de les anteriors versions o què s'ha eliminat, esta vegada en verd però amb el text ratllat.</p>
+<p><img alt="GSuite: versions de document" src="../img/github/control-version-gsuite-2.png" /></p>
+<p>VSCode també incorpora control de versions als nostres arxius, de forma que podem tornar a una versió anterior en el temps. Per fer-ho, pulsem baix a la dreta <em>TIMELINE</em> o <em>LÍNIA DE TEMPS</em> segons l'idioma i veurem les versions anteriorment guardades de forma automàtica. Si fem clic sobre qualsevol de les versions, podrem veure els canvis respecte a la versió actual i escollir la que més ens interesse.</p>
+<p><img alt="timeline" src="../img/github/timeline.png" /></p>
+<h3 id="git">Git</h3>
+<p>Git és un sistema de control de versions de codi obert creat per Linus Torvalds, el creador del primer kernel de Linux, l'any 2005.</p>
+<p>Es diu que Git és un sistema de control de versions distribuït, ja que totes les versions estan disponibles a l'ordinador de cada desenvolupador, cosa que permet ramificar i fusionar molt fàcilment.</p>
+<p>Segons una enquesta de desenvolupadors de Stack Overflow, més del 87% dels desenvolupadors utilitzen Git.</p>
+<h2 id="aleshores-que-es-github">Aleshores, què és <a href="https://github.com/">Github</a>?</h2>
+<p>GitHub és una plataforma que ofereix un servei gratuït d'allotjament de repositoris Git basat en el núvol. En altres paraules, és una forma d'utilitzar repositoris Git a través de la web.</p>
+<p>La interfície de GitHub és molt intuïtiva i fàcil d'utilitzar, i elimina la necessitat d'utilitzar la línia de comandaments per a dur el control de versions. És tan fàcil d'utilitzar, que ha adquirit molta popularitat per a gestionar altres tipus de projectes, com ara escriure llibres, apunts...</p>
+<p>Els repositoris que creem a Github poden ser públics i estar disponibles per a qualsevol persona o ser privats, però en aquest cas només seran accessibles pels col·laboradors del repositori.</p>
+<div class="admonition note">
+<p class="admonition-title">Github</p>
+<p>Github va entrar en funcionament l'any 2008. </p>
+<p>L'any 2018, Microsoft el va adquirir per 7.500 milions de dòlars.</p>
+<p>En Gener del 2020, GitHub tenia més de 40 milions d'usuaris, més de 190 milions de repositoris, 28 milions dels quals són públics.</p>
+</div>
+<h1 id="configuracio-de-github">Configuració de Github</h1>
+<h2 id="registre-dusuari">Registre d'usuari</h2>
+<p>En este primer punt, crearem un repositori github per a allotjar la nostra web. </p>
+<p>El primer pas serà registrar-nos a github en cas que no ho estigam ja accedint al següent enllaç <a href="https://github.com/signup?user_email=&amp;source=form-home-signup">https://github.com/signup?user_email=&amp;source=form-home-signup</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Registre</p>
+<p>Fixeu-se que el registre es realitza a través d'un formulari completament integrat en la web amb una estètica molt cuidada</p>
+</div>
+<p><img alt="Registre de github" src="../img/github/github-register.png" /></p>
+<h2 id="creacio-dun-repositori">Creació d'un repositori</h2>
+<p>Un repositori de github és un projecte allotjat al núvol sobre el qual volem portar un control de versions a través de la web.</p>
+<div class="admonition warning">
+<p class="admonition-title">Repositori github en local</p>
+<p>Un repositori també el podem clonar al nostre disc dur per treballar de forma local, i solament enviar els canvis definitius per a la seua publicació. VSCode ens proporciona facilitats per treballar amb repositoris de github. Recomanem utilitzar esta forma de treballar.</p>
+</div>
+<p>Per a crear un repositori, iniciem sessió a <a href="https://github.com">https://github.com</a> i fem clic al botó de <code>+</code> de dalt a la dreta, després seleccionem l'opció de <code>New repository</code>. </p>
+<p><img alt="new repository" src="../img/github/github-new-repository2.png" /></p>
+<p>Assigneu un nom que identifique el repositori i el feu públic. Si voleu, també podeu afegir un arxiu <code>README</code> i una llicència.</p>
+<p><img alt="new repository" src="../img/github/github-new-repository3.png" /></p>
+<h2 id="clonacio-del-repositori">Clonació del repositori</h2>
+<p>El que anem a fer ara és portar el repositori de Github al nostre ordinador per a poder agregar contingut, que una vegada provat, tornarem a pujar a Github per a que es publique la nostra web, igual que hem fet a Aules. </p>
+<p>Per a portar el codi hem de clonar el repositori al nostre disc dur. Utilitzarem la pestanya de control de versions que incorpora el Visual Studio Code per a fer-ho.</p>
+<p><img alt="VSCode Clonar Repositori" src="../img/github/clonar-vscode.png" /></p>
+<p>Ens demanarà el repositori a clonar, ahí peguem la URL del nostre repositori. La podem obtindre del nostre repositori d'una de les dues següents formes, depenent si està completament buit o si ja conté algun arxiu (README.md i LICENSE).</p>
+<p><img alt="Clonar repositori buit" src="../img/github/clonar.png" />
+Clonació de repositori buit</p>
+<p><img alt="Clonar repositori buit" src="../img/github/clonar3.png" />
+Clonació de repositori amb contingut</p>
+<div class="admonition important">
+<p class="admonition-title">Git</p>
+<p>En cas de no tindre git instal·lat, l'opció de clonar el repositori ens apareixerà deshabilitada. </p>
+</div>
+<p>Es pot instal·lar amb <strong>sudo apt install git</strong> en sistemes basats en Debian.  </p>
+<p>En sistemes Windows podeu visitar el següent <a href="https://github.com/git-for-windows/git/releases/">enllaç</a> i baixar l'última versió (Git-2.39.2-64-bit.exe en el moment d'escriure estos apunts).</p>
+<p>Si el repositori s'ha clonat correctament, tindreu una carpeta amb el mateix nom del repositori a l'ubicació on l'heu clonat. Si contenia arxius, estaran dins la carpeta.</p>
+<h2 id="configurem-el-projecte-dmkdocs-per-a-publicar-a-github">Configurem el projecte d'mkdocs per a publicar a github</h2>
+<p>Ara, haurem de crear un projecte d'mkdocs dins la carpeta del repositori o copiar el repositori creat anteriorment.</p>
+<div class="admonition warning">
+<p class="admonition-title">mkdocs new</p>
+<p>En l'apartat de crear un nou projecte amb mkdocs, es va explicar que l'ordre és <code>mkdocs new "nom del projecte"</code>. </p>
+<p>Però si ja tens clonada la carpeta de github, <strong>hauràs d'executar <code>mkdocs new "nom carpeta github"</code></strong> per a que no et cree una nova carpeta dins el projecte, sinó utilitzar la mateixa que github.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Carpeta docs i site</p>
+<p>Per defecte, els arxius markdown en un projecte mkdocs estan a la carpeta <code>docs</code>, mentre que la web es construeix a la carpeta <code>site</code>. Però github sols pot publicar webs que s'allotgen a l'arrel o a la carpeta <code>docs</code>. Per tant, els arxius del <code>build</code> han d'estar a l'arrel o a la carpeta docs.</p>
+<p>Per tant tenim dos possibles solucions:
+1. Executar el <code>mkdocs build</code> i copiar el contingut de la carpeta <code>site</code> a l'arrel del repositori (opció no recomanada).
+2. Modificar la configuració per a que els arxius font en markdown estiguen en una altra carpeta i que el resultat del build estiga a la carpeta docs (opció recomanada).</p>
+<p>La segona solució és la recomanada, ja que ens permetrà tindre en un mateix repositori de github els fonts en markdown i la web construida.</p>
+</div>
+<p>Per a configurar esta segona opció, simplement hem d'indicar a l'arxiu de configuració de mkdocs que els markdown estan en una altra carpeta i que la construcció vaja a la carpeta docs:</p>
+<pre><code class="language-yaml">docs_dir: 'md'
+site_dir: 'docs'
+</code></pre>
+<p>Ara, haureu de situar els arxius en format .md a una carpeta md i deixar la carpeta docs buida.</p>
+<p>En executar la construcció del site web amb <code>mkdocs build</code>, els arxius resultants es posaran a la carpeta docs.</p>
+<h2 id="afegim-arxius-locals-al-repositori-remot-de-github">Afegim arxius locals al repositori remot de github</h2>
+<p>Ara ens falta portar o publicar els canvis que hem fet al repositori local al repositori remot de github.</p>
+<p>Si s'heu fixat a l'explorador del VSCode apareix la lletra U (<em>untracked</em>) a l'esquerra de cada arxiu. Això indica que eixe arxiu no està inclòs al repositori. Altres apareixeran amb la M si han sigut modificats després d'haver-los afegit (<em>modified</em>). </p>
+<p>Anem, en la pestanya de l'equerra, a <em>Source Control</em>, escrivim un missatge indicant quins canvis volem confirmar i li donem al botó de commit. En este cas, nosaltres hem posat "primera versió de la web amb mkdocs".</p>
+<p><img alt="Confirmem els canvis" src="../img/github/commit2.png" /></p>
+<p>Ens ixirà una finestra preguntant si volem afegir i confirmar els canvis directament. Responem de forma afirmativa.</p>
+<p>Per a evitar que ens fallen els commits, anem a configurar el nostre nom i el nostre correu a la configuració de Git, amb les següents dues ordres, introduint les vostres dades corresponents (el correu i el nom d'usuari són els utilitzats durant el registre de github):</p>
+<pre><code class="language-sh">git config --global user.email &quot;El vostre correu&quot;
+git config --global user.name &quot;El vostre nom d'usuari&quot;
+</code></pre>
+<h2 id="pugem-els-canvis-a-github">Pugem els canvis a Github</h2>
+<p>Una vegada confirmats els canvis al repositori, sols ens falta sincronitzar el remot amb els canvis del local.</p>
+<p>Per fer-ho, simplement li donem al botó de sincronitzar, situat on abans estava el de <code>commit</code> a la pestanya del control de versions.</p>
+<p><img alt="Sincronitzem el remot" src="../img/github/push2.png" /></p>
+<p>El VSCode ens avisarà de que l'extensió Github (ja ve integrada sense necessitat d'instal·lar-la) vol iniciar sessió a Github per a guardar els canvis que hem fet en local. Li donem a permetre i s'iniciarà l'intercanvi del <em>token</em> en diversos passos entre el navegador i el VSCode. A partir d'este moment VSCode podrà accedir de forma segura al repositori remot. Si no teniu la sessió iniciada a Github, se us demanarà l'usuari i la contrasenya durant el procés. </p>
+<p><img alt="Registrar-se en Github" src="../img/github/allow.png" /></p>
+<p>Si tot ha anat bé, veureu en l'apartat de comptes d'usuari (icona de baix a l'esquerra) de VSCode que esteu amb la sessió de Github iniciada i el repositori local se n'haurà pujat a Github per a la seua publicació.</p>
+<p><img alt="Comptes d'usuari i sessions" src="../img/github/account.png" /></p>
+<p>Podeu comprovar que els arxius que hem creat en local, estan al nostre respositori web de Github simplement accedint al repositori i observant si els arxius estan.</p>
+<p><img alt="remot sincronitzat" src="../img/github/sincronitzat.png" /></p>
+<h1 id="configurem-github-per-a-que-ens-publique-la-web">Configurem github per a que ens publique la web</h1>
+<p>Per últim, sols ens falta configurar github per a que ens publique el nostre <em>build</em>.</p>
+<p>Aneu a <em>Settings</em> i en l'apartat <strong>Pages</strong> indiqueu que voleu publicar de la rama <em>main</em>, la carpeta <em>docs</em>.</p>
+<p>En breu vos indicarà si la pàgina ja està publicada o si per contra hi ha hagut algun error. Si tot ha anat bé us indicarà l'adreça on s'ha publicat, que serà <strong>https://nom_usuari.github.io/nom_repositori</strong>. Comproveu que ja podeu navegar per ella i es veu tal qual la veieu al servidor local.</p>
+<p>Esta web està publicada a <a href="https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/">https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/</a> i el seu repositori corresponent amb tots els arxius font, arxiu de configuració i llicència el trobareu a <a href="https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/">https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Treball en local i en remot</p>
+<p>Els arxius es poden modificar tant per web com en local, però recomanem fer-ho en local, ja que necessitem fer un build per a publicar els canvis. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Construcció de la web</p>
+<p>Recordeu executar un build abans de portar els canvis a publicar, d'altra forma, sols es publicaran els canvis als arxius font, però no a la web publicada. El procés de publicació sol tardar un parell de minuts en veures reflexat després de sincronitzar amb el remot.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Ús de Source Control</p>
+<p>Si esteu acostumats a treballar amb git i github, podeu executar els comandaments a través de git amb clone, add, commit i push. </p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../aules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Allotgem la web a Aules" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Allotgem la web a Aules
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../aules%20vs%20github/" class="md-footer__link md-footer__link--next" aria-label="Next: Docència: Aules o github?" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Docència: Aules o github?
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+      
+    
+  </body>
+</html>
