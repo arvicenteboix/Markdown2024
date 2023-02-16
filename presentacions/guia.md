@@ -420,3 +420,17 @@ $ ls -lh | grep pdf
 -rw-rw-r-- 1 ferran ferran  50M Feb 26 16:58 marpit.pdf
 -rw-rw-r-- 1 ferran ferran 757K Feb 26 16:48 marpit_red.pdf
 ```
+
+---
+Per a reduir el tamany si esteu utilitzant Windows haurieu de:
+- Instal·lar el programa ghostscript, el podeu trobar al següent enllaç https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/
+
+- agregar al Path la ruta d'instal·lació (C:\Program Files\gs\gs10.00.0\bin normalment) per a que cmd trobe el programa. Busqueu "Editar variables de entorno..." al menú d'inici, i agregueu una nova ruta a la variable Path amb la ruta anterior.
+
+- Per últim haurieu d'executar l'ordre a cmd (no a PowerShell) com segueix:
+
+```ps
+gswin64c.exe -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="Reduit.pdf"  "Original.pdf"
+```
+
+On Original.pdf és l'arxiu en quailitat original i Reduit.pdf el que produirà ghostScript.
