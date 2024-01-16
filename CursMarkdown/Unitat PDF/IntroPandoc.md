@@ -23,7 +23,7 @@ toc-depth: 2
 
 # capçalera i peu
 header-left: \thetitle
-header-right: Curs 2021-2022
+header-right: Curs 2023-2024
 footer-left: CEFIRE València
 footer-right: \thepage/\pageref{LastPage}
 
