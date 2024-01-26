@@ -4,9 +4,9 @@ title: Exportant a PDF
 titlepage: true
 subtitle: Introducció a Pandoc
 author: 
-- Ferran Cunyat
-- Joan Gerard Camarena
-- Jose Alfredo Murcia
+  - Ferran Cunyat
+  - Joan Gerard Camarena
+  - Jose Alfredo Murcia
 lang: ca
 
 # portada
@@ -94,6 +94,7 @@ El format va ser desenvolupat inicialment per *Adobe Systems*, i es va convertir
 
 Al llarg de la unitat, anem a treballar amb l'eina *Pandoc*, que ens ajudarà a realitzar aquesta conversió entre formats.
 
+
 # Introducció a Pandoc
 
 El programari Pandoc està format per un conjunt de programes que inclou una llibreria de funcionalitats, que realitzen la conversió entre fitxers de text amb diferents formats de marcat, junt amb una eina de la línia d'ordres que fa ús d'aquesta llibreria.
@@ -112,7 +113,7 @@ Existeixen formats d'entrada o eixida que són menys expressius que la represent
 
 Els repositoris de programari d'Ubuntu contenen el paquet `pandoc`, que podem instal·lar directament des de l'eina `apt` o el gestor de paquets del sistema.
 
-Ubuntu 20.04 (i per tant LliureX 21) disposen d'un empaquetat propi de la versió 2.5 de Pandoc, que és de novembre de 2018. Si volem accedir a la última versió, la podrem descarregar a través de l'enllaç [https://github.com/jgm/pandoc/releases/latest](https://github.com/jgm/pandoc/releases/latest). En estos moments (octubre de 2021), la última versió disponible és la 2.14.2.
+Ubuntu 20.04 (i per tant LliureX 21) disposen d'un empaquetat propi de la versió 2.5 de Pandoc, que és de novembre de 2018. Si volem accedir a la última versió, la podrem descarregar a través de l'enllaç [https://github.com/jgm/pandoc/releases/latest](https://github.com/jgm/pandoc/releases/latest). En estos moments (octubre de 2021), la última versió disponible és la 3.1.11.
 
 Per tal de descarregar esta última versió, només haurem de descarregar el paquet de programari corresponent al nostre sistema operatiu. Al nostre cas, per a Debian/Ubuntu/Lliurex de 64 bits descarregarem `pandoc-2.14.2-1-amd64.deb`.
 
@@ -126,18 +127,19 @@ Una vegada descarregat, tenim diverses opcions d'instal·lar-lo:
 
 2. Fet ús de les eines d'instal·lació des de la línia d'ordres, com per exemple apt (tingueu en compte que caldrà iindicar la ruta cap al fitxer .deb que hajau descarregat):
 
-```
-$ sudo apt install ./pandoc-2.14.2-1-amd64.deb
-```
+    ```
+    $ sudo apt install ./pandoc-3.1.11-amd64.deb
+    ```
 
 ::: caution
+
 Al llarg d'aquesta unitat, veureu que anem a treballar molt amb la línia d'ordres. Per accedir a ella, ho farem des d'*Inici* > *Sistema* > *Konsole*:
 
 ![Accés a la terminal en LliureX 21](img/accesKonsole.png){ width=400px }
 
 Recordeu que quan fem referència a algun fitxer des de la línia d'ordres, hem d'estar ubicats a la mateixa carpeta que es troba el fitxer. Per a això cal que estigueu familiaritzatas una mica amb l'ús d'ordres com `cd`  (canviar carpeta) i `ls` (per sabe el contingut d'una carpeta).
-:::
 
+:::
 
 # Ús de Pandoc
 
@@ -166,7 +168,7 @@ Per tal d'evitar estes advertències, caldrà que els fitxers tinguen una extens
 pandoc fitxerEntrada.md -o fitxerEixida.html
 ```
 
-Per defecte, `pandoc` produeix un fragment de document, no un document complet. Per tal de generar un fitxer HTML complet, amb el `<head>` i `<body>` caldrà utilitzar l'opció `-s`o `--standalone`:
+Per defecte, `pandoc` produeix un fragment de document, no un document complet. Per tal de generar un fitxer HTML complet, amb el `<head>` i `<body>` caldrà utilitzar l'opció `-s` o `--standalone`:
 
 ```bash
 $ pandoc fitxerEntrada.md -o fitxerEixida.html -s
@@ -182,6 +184,7 @@ Amb això generarem l'HTML complet. L'advertència que ens apareix, es deu al fe
 ```bash
 pandoc fitxerEntrada.md -o fitxerEixida.html -s --metadata title="Pàgina de prova"
 ```
+
 
 ## Concatenació de diversos fitxers
 
@@ -252,7 +255,7 @@ Veiem a les següents taules les possibilitats que tenim per tal de generar docu
 | LaTeX        | (per defecte) o `-t latex` | texlive-latex-base |
 | HTML         |  `-t html`                 | wkhtmltopdf        |
 | ConTeXt      |  `-t context`              | context            |
-| Roff ms      |  `-t ms`                   | groff            |
+| Roff ms      |  `-t ms`                   | groff              |
 
 
 A més, fent ús de l'opcó `--pdf-engine`, podem triar entre:
@@ -283,9 +286,9 @@ Per tal de fer la instal·lació d'aquests motors podem fer ús, des de la líni
 
 * Per a XeLaTeX:
 
-```
-sudo apt install texlive-xetex
-```
+    ```
+    sudo apt install texlive-xetex
+    ```
 
 També podem realitzar la instal·lació fent ús del gestor de paquets *Synaptic* (*Inici > Sistema > Gestor de paquets Synaptic*):
 
@@ -307,7 +310,7 @@ Error producing PDF.
 ! Package babel Error: Unknown option `catalan'. Either you misspelled it (babel) or the language definition file catalan.ldf was not found.
 ```
 
-Per resoldre-ho, podem intal·lar el paquet `texlive-lang-spanish`, o `texlive-lang-all`, a través de la línia d'ordres o del maeteix Synapic.
+Per resoldre-ho, podem intal·lar el paquet `texlive-lang-spanish`, o `texlive-lang-all`, a través de la línia d'ordres o del mateix Synapic.
 :::
 
 
@@ -315,7 +318,7 @@ Per resoldre-ho, podem intal·lar el paquet `texlive-lang-spanish`, o `texlive-l
 
 Pandoc permet treballar amb plantilles per a diversos tipus de documents (pdf, odt), que defineixen l'aspecte dels nostres documents.
 
-Si genereu un document pdf, per defecte utilitza la plantilla *estàndard* d'aquest tipus de documents amb LaTex. No obstant això, podem indicar una altra plantilla amb l'opció --template:
+Si genereu un document pdf, per defecte utilitza la plantilla *estàndard* d'aquest tipus de documents amb LaTex. No obstant això, podem indicar una altra plantilla amb l'opció `--template`:
 
 ```bash
 pandoc fitxerEntrada -o fitxerEixida.pdf  --pdf-engine xelatex --template=nomPlantilla.latex
@@ -323,7 +326,7 @@ pandoc fitxerEntrada -o fitxerEixida.pdf  --pdf-engine xelatex --template=nomPla
 
 Disposeu de més informació sobre creació de plantilles a la [documentació de Pandoc](https://pandoc.org/MANUAL.html#templates).
 
-Al nostre cas, fem ús de la [plantilla Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template). 
+Al nostre cas, fem ús de la [plantilla Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) (clic per a accedir).
 
 ::: important
 Abans de descarregar la plantilla, però, instal·larem el paquet de programari *texlive-fonts-extra*, que inclou diverses tipografies, entre les quals es troben les que s'utilitzen en aquesta plantilla, i les icones *Awesome*, que utilitzarem en caixes de diàlegs. Aquesta instal·lació, podem fer-la bé des de l'eina Synaptic, com des de la línia d'ordres amb:
@@ -363,6 +366,51 @@ I estem ubicats a la carpeta *Documents*, per afegit la plantilla a la conversi�
 ```bash
 pandoc Document.md -o Document.pdf --pdf-engine=xelatex --template=pandoc-latex-template-master/eisvogel.tex
 ```
+
+## Plantilla accessible al sistema
+
+Tal i com ho hem fet anteriorment, hem de tenir la plantilla dins de la carpeta on tenim el nostre document, i això suposarà posar-la en tots els projectes que fem, la qual cosa dificulta la gestió de la mateixa. És per això que ens interessarà instal·lar la plantilla per fer-la accessible des de qualssevol projecte que fem en markdown.
+
+Pandoc te una carpeta pròpia per accedir a les distintes plantilles. Podem saber el lloc del sistema estudiant la sortida de `pandoc --version`:
+
+```sh
+MacBook-Pro-de-Joan:Markdown2024 joange$ pandoc --version
+pandoc 3.1.11.1
+Features: +server +lua
+Scripting engine: Lua 5.4
+User data directory: /Users/joange/.pandoc
+Copyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org
+This is free software; see the source for copying conditions. There is no
+warranty, not even for merchantability or fitness for a particular purpose.
+```
+
+A banda de la versió de pandoc, ens informa de `User data directory`. Aquesta carpeta potser que no existisca, però la podem crear. Dins d'ella haurem de crear altra subcarpeta `templates`, i dins copiar per fi l'arxiu `eisvogel.tex`:
+
+```sh
+# anem a la carpeta de l'usuari del sistema
+cd ~              # linux o mac
+cd $HOME          # windows (powershell)
+cd %USERPROFILE%  # windows
+
+mkdir .pandoc
+cd .pandoc
+mkdir templates
+
+# des de la carpeta on està la plantilla (linux/mac)
+cp eisvogel.tex ~/.pandoc/templates
+
+# des de la carpeta on està la plantilla (windows)
+cp eisvogel.tex $HOME/.pandoc/templates
+cp eisvogel.tex %USERPROFILE%/.pandoc/templates
+```
+
+::: tip
+
+- Recorda que la tilde `~` així com el `$HOME` o`%USERPROFILE%` son variables de entorn que fan referència a la carpeta del usuari del sistema. 
+- En algunes
+
+:::
+
 
 # Metadades dels documents
 

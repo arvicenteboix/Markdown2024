@@ -1,7 +1,7 @@
 ---
 # Front matter
 # Metainformació del document
-title: Exportant a PDF.  
+title: Exportant a PDF
 titlepage: true
 subtitle: Opcions avançades.
 author: 
@@ -23,7 +23,7 @@ toc-depth: 2
 
 # capçalera i peu
 header-left: \thetitle
-header-right: Curs 2021-2022
+header-right: Curs 2023-2022
 footer-left: CEFIRE València
 footer-right: \thepage/\pageref{LastPage}
 
@@ -84,19 +84,20 @@ pandoc-latex-environment:
 
 En aquesta secció anem a veure algunes directives que ens poden resultar interessant per a la generació de PDF a partir dels nostres documents escrits amb markdown, combinades amb la plantilla `Eisvogel`. Es veuran certs aspectes de la configuració de les directives YAML que afecten a tot el document i passarem després a veure alguns aspectes que ens ajudaran a maquetar els nostres documents amb un acabat professional.
 
-La ferramenta que utilitzarem per dur a terme conversions entre arxius en markdown i pdf és [pandoc](https://pandoc.org/). Abans de començar cal comentar que processar amb pandoc un document de markdown és molt simple, però pot ser també molt potent. El conjunt d'etiquetes de markdown és molt simple i reduït, ja que està pensat més en el contingut que en la presentació. Com que pel camí de processar un md fins al pdf realitza una conversió (transparent a l'usuari) pel format tex (\LaTeX), això ens permet afegir comandaments de \LaTeX dins del nostre document. Com a contrapartida, dins d'un bloc Latex no podem afegir marques markdown, a menys que fem alguna coseta, com es veurà. El mateix ocòrre si posem codi HTML dins del nostre markdown.
+La ferramenta que utilitzarem per dur a terme conversions entre arxius en markdown i pdf és [pandoc](https://pandoc.org/). Abans de començar cal comentar que processar amb pandoc un document de markdown és molt simple, però pot ser també molt potent. El conjunt d'etiquetes de markdown és molt simple i reduït, ja que està pensat més en el contingut que en la presentació. Com que pel camí de processar un md fins al pdf realitza una conversió (transparent a l'usuari) pel format tex (\LaTeX), això ens permet afegir comandaments de \LaTeX\ dins del nostre document. Com a contrapartida, dins d'un bloc Latex no podem afegir marques markdown, a menys que fem alguna coseta, com es veurà. El mateix ocòrre si posem codi HTML dins del nostre markdown.
 
 ::: note
-Partirem d'un arxiu de capçalera bàsic, on anirem afegint opcions. Al final del tema apareixerà un exemple complet de dit arxiu amb comnetaris indicant que fa cada cosa.
+Partirem d'un arxiu de capçalera bàsic, on anirem afegint opcions. Al final del tema apareixerà un exemple complet de dit arxiu amb comentaris indicant que fa cada cosa.
 :::
 
 # Configuracions globals del document. Capçalera YAML o *front matter*
 
-Abans de començar a composar el document pròpiament dit, hem d'establir la configuració global del nostre document, ajustant-ho a la plantilla _eisvogel_ que comentem. Oferim ací una capçalera YAML, anomenada en l'argot *front matter*, explicant cadascuna de les seues ocpions.
+Abans de començar a composar el document pròpiament dit, hem d'establir la configuració global del nostre document, ajustant-lo a la plantilla _eisvogel_ que comentem. Oferim ací una capçalera YAML, anomenada en l'argot *front matter*, explicant cadascuna de les seues ocpions. 
+
 
 ```yaml
 ---
-title: Generant arxius PDF
+title: Exportant a PDF
 subtitle: Transformació des de Markdown
 author: 
 - Ferran
@@ -129,7 +130,7 @@ Els camps `title`, `subtitle`, `author` i `abstract` indiquen, tal i com indica,
 
 ## Opcions de la pàgina del títol
 
-- `titlepage: true` indica que volem una pàgina sencera per a títol.
+- `titlepage: true` indica que volem una pàgina sencera per a títol o portada.
 - `titlepage-rule-height:mesura`  indica el grossor en punts d'una línea decorativa. Posar 0 si no volem tal línea.
 - `titlepage-rule-color:RRGGBB` color de la línia en format RGB, on cada xifra és un hexadecimal.
 - `titlepage-text-color:RRGGBB` color del text del títol en format RGB, on cada xifra és un hexadecimal.
@@ -198,7 +199,16 @@ footer-right: \thepage de \pageref{LastPage}
 
 Com podeu veure, poden inclou-re's referències a la pàgina actual (`\thepage`), saber el nombre de pàgines `\pageref{LastPage}`, quina és la secció actual (el número, no el nom) i fins i tot el dia actual (`today`).
 
+::: important
+Per a que funcione adeqüadamente el recompte del nombre de pàgines del document, em de fer servir un paquet de Latex natiu. Per incloure aquest paquet en la compilació s'ha d'incloure d'aquesta manera.
 
+```yaml
+header-includes:
+  - \usepackage{lastpage}
+```
+
+Afegirem més paquets per a altres necessitats.
+:::
 
 ## Marca d'aigua
 
@@ -334,12 +344,11 @@ Important: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pelle
 \newpage
 
 
+## Imatges i Columnes
 
 En aquest últim apartat anem a veure una serie de _fórmules_ per a aconseguir alguns efectes de presentació més professionals. Recordar que l'objectiu del Markdown és centrar-se en el contingut i no en l'aspecte, però sempre que produim un PDF l'aspecte final del mateix és fonamental.
 
 Per a moltes d'aquestes fórmules recurrirem als comandaments de \LaTeX, ja que com es diu _LaTeX és una imprenta a les teues mans_ i, tot i que pot resultar molt complicat al principi, és molt potent.
-
-## Imatges i Columnes
 
 ### Imatges
 
@@ -363,7 +372,7 @@ com per exemple:
 ![Logo de Markdown](./img/Markdown.png){width=8cm} 
 ```
 
-El mateix amb \LaTeX seria:
+El mateix amb \LaTeX \ seria:
 
 ```latex
 \begin{figure}
@@ -388,7 +397,8 @@ Fixar-se que:
   
 ::: tip
 
-\LaTeX també inclou l'opció de mesurar les imatge com a percentatge de l'ample de la pàgina, posant `width=0.3\linewidth` (es veurà al següent exemple)
+\LaTeX \ també inclou l'opció de mesurar les imatge com a percentatge de l'ample de la pàgina, posant `width=0.3\linewidth` (es veurà al següent exemple)
+
 :::
 
 Si volem situar dos o més imatges una al costat de l'altra, haurem de recòrrer al paquet `subfigure`. Mirem l'exemple següent:
@@ -414,6 +424,7 @@ el que ens dona:
 \end{figure}
 
 Fixar-se que la generació d'una de les imatges menudes té les parts `\subfigure[retol]{\includegraphics[tamany]{imatge}`:
+
 - El `retol`, que queda identificat automàticament.
 - la imatge, tal i com feiem abans, amb la seua dimensió i ruta 
 
@@ -480,12 +491,12 @@ Proin eu congue neque. Sed dapibus eros sit amet eros rutrum pharetra. Vivamus u
 \end{multicols}
 
 ::: warning
-Com estem dins d'un entorn \LaTeX, és a dir, entre un `\begin` i un `\end`, llavors ens apareix un problema, que no podem formatejar el text dins de les columnes amb comandaments de format de Markdown. Això vol dir que no podrem posar cursiva amb `*text en cursiva*`, ni posar un encapçalat amb `# titol`etc.
+Com estem dins d'un entorn \LaTeX, és a dir, entre un `\begin` i un `\end`, llavors ens apareix un problema, que no podem formatejar el text dins de les columnes amb comandaments de format propi de Markdown. Això vol dir que no podrem posar cursiva amb `*text en cursiva*`, ni posar un encapçalat amb `#titol` etc.
 :::
 
 #### Redefinint els blocs de \LaTeX
 
-Per solucionar el problema vist anteriorment, la solució és fer creure a \LaTeX que no està dins d'un bloc \LaTeX, així podem seguir fent servir Markdown sense problema. Per a fer-ho hem de **redefinir** els comandaments `\begin` i `\end`, afegint en l'encapçalament:
+Per solucionar el problema vist anteriorment, la solució és fer creure a \LaTeX \ que no està dins d'un bloc \LaTeX, així podem seguir fent servir Markdown sense problema. Per a fer-ho hem de **redefinir** els comandaments `\begin` i `\end`, afegint en l'encapçalament:
 
 ```yaml
   - \newcommand{\hideFromPandoc}[1]{#1}
@@ -495,22 +506,29 @@ Per solucionar el problema vist anteriorment, la solució és fer creure a \LaTe
       }
 ```
 
-A partir d'ara en compte de `\begin` i `\end` haurem de posar `\Begin` i `\End`, en majúscules, com veurem a continuació. Aquest paràgraf inicial:
+A partir d'ara en compte de `\begin` i `\end` haurem de posar `\Begin` i `\End`, en majúscules, com veurem a continuació. 
+
+Si teniem, com  a punt de partida aquest paràgraf inicial:
 
 ```latex
 \begin{multicols}{2}
 Proin eu congue neque. Sed **dapibus** eros sit amet eros rutrum pharetra. Vivamus ultrices dolor dolor, sed vehicula ipsum *pulvinar* et. 
+
 - element1
 - element2
+
 Nullam nec elit eget erat aliquam tempus vel vitae velit. Vivamus non ante volutpat dolor hendrerit iaculis. Praesent id ***metus*** nisl. Sed eros erat, pulvinar vitae sem et, lobortis tempus dui. Proin id purus eget libero molestie varius sit amet sed turpis. 
 \end{multicols}
 ```
+
 queda com segueix:
 
 \begin{multicols}{2}
 Proin eu congue neque. Sed **dapibus** eros sit amet eros rutrum pharetra. Vivamus ultrices dolor dolor, sed vehicula ipsum *pulvinar* et. 
+
 - element1
 - element2
+  
 Nullam nec elit eget erat aliquam tempus vel vitae velit. Vivamus non ante volutpat dolor hendrerit iaculis. Praesent id ***metus*** nisl. Sed eros erat, pulvinar vitae sem et, lobortis tempus dui. Proin id purus eget libero molestie varius sit amet sed turpis. 
 \end{multicols}
 
@@ -520,8 +538,10 @@ Podem comprovar que al text tenim unes paraules que no les ha formatat (les que 
 ```latex
 \Begin{multicols}{2}
 Proin eu congue neque. Sed **dapibus** eros sit amet eros rutrum pharetra. Vivamus ultrices dolor dolor, sed vehicula ipsum *pulvinar* et. 
+
 - element1
 - element2
+
 Nullam nec elit eget erat aliquam tempus vel vitae velit. Vivamus non ante volutpat dolor hendrerit iaculis. Praesent id ***metus*** nisl. Sed eros erat, pulvinar vitae sem et, lobortis tempus dui. Proin id purus eget libero molestie varius sit amet sed turpis. 
 
 \End{multicols}
@@ -531,15 +551,17 @@ queda perfectemen en columnes i interpretat el Markdown.
 
 \Begin{multicols}{2}
 Proin eu congue neque. Sed **dapibus** eros sit amet eros rutrum pharetra. Vivamus ultrices dolor dolor, sed vehicula ipsum *pulvinar* et. 
+
 - element1
 - element2
+  
 Nullam nec elit eget erat aliquam tempus vel vitae velit. Vivamus non ante volutpat dolor hendrerit iaculis. Praesent id ***metus*** nisl. Sed eros erat, pulvinar vitae sem et, lobortis tempus dui. Proin id purus eget libero molestie varius sit amet sed turpis. 
 
 \End{multicols}
 
 ::: warning
 
-Fixeu-se que cal posar una linea en blanc abans del `\End{multicols}` per a que funcione de manera adequada, degut a la traducció que fa el preprocessador de \LaTeX entre el `\Begin` i el `\begin`
+Fixeu-se que cal posar una linea en blanc abans del `\End{multicols}` per a que funcione de manera adequada, degut a la traducció que fa el preprocessador de \LaTeX  \ entre el `\Begin` i el `\begin`
 :::
 
 
@@ -548,7 +570,8 @@ Fixeu-se que cal posar una linea en blanc abans del `\End{multicols}` per a que 
 De tant en tant, pot resultar-nos interessant el colocar alguna pàgina apaïsades, sobretot si tenim un gràfic ample que es queda menut dins d'una pàgina vertical o una gran taula amb moltes columnes. Per a poder fer-ho posarem, dins la capçalera el paquet `pdflscape`
 
 ```yaml
-   - \usepackage{pdflscape}
+header-includes:
+  - \usepackage{pdflscape}
 ```
 
 i allò que volem que aparega en pàgina apaïsada ho posarem dins d'un bloc com segueix:
@@ -613,7 +636,7 @@ header-includes:
   #  imatges i subfigures
    - \usepackage{graphicx}
    - \usepackage{subfigure}
-
+   - \usepackage{lastpage}
 
  #  - \usepackage{adjustbox}
   # marca d'aigua
@@ -653,16 +676,12 @@ pandoc-latex-environment:
 Les opcions que deuen d'apareixer a la crida a `pandoc` seran:
 
 ```bash
-  --from markdown       # format d'oritge markdown
-  -N                    # generar nombres de seccions
-  --template eisvogel   # plantilla
-  --toc                 # generar la taula de continguts
+  --from markdown         # format d'oritge markdown
+  -N                      # generar nombres de seccions
+  --template eisvogel     # plantilla
+  --toc                   # generar la taula de continguts
   --variable urlcolor=cyan  # color per a les URL
   --filter pandoc-latex-environment  # enviar a latex les constants
-  --listings            # interpretar els blocs de codi
-<<<<<<< HEAD
+  --listings              # interpretar els blocs de codi
+  --pdf-engine xelatex    # motor pdf
 ```
-=======
-  --pdf-engine xelatex
-```
->>>>>>> 7e474ca08b23ff45caec9ed83541ba999e81dfc1

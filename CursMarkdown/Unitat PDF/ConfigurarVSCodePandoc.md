@@ -40,7 +40,7 @@ header-includes:
   #  imatges i subfigures
   - \usepackage{graphicx}
   - \usepackage{subfigure}
-
+  - \usepackage{lastpage}
 
   #  - \usepackage{adjustbox}
   # marca d'aigua
@@ -97,21 +97,39 @@ Una vegada instal·lada l'extensió, sols ens faltarà configurar-la per a gener
 
 Anem a *File -> Preferences -> Settings* i busquem la paraula pandoc.
 
-Veureu una caixa d'edició de text que es diu *Pandoc: Pdf Opt String. Ahí haureu d'escriure totes les opcions que vulgau utilitzar des de la línia de comandaments amb pandoc (el -t pdf, per a generar pdf no s'ha de posar).
+Veureu una caixa d'edició de text que es diu **Pandoc: Pdf Opt String**. Ahí haureu d'escriure totes les opcions que vulgau utilitzar des de la línia de comandaments amb pandoc (el -t pdf, per a generar pdf no s'ha de posar).
 
 ![Configuració de la cadena de text de generació de pdf](img/settings.png){width=10cm}
 
 Per exemple, en el meu cas, en aquest quadre de text tinc:
 
 ```
---from markdown --template eisvogel --toc --variable urlcolor=cyan --listings -N --pdf-engine xelatex --filter pandoc-latex-environment
+--from markdown --template eisvogel.tex --toc --variable urlcolor=cyan --listings 
+-N --pdf-engine xelatex --filter pandoc-latex-environment
 ```
 
-Una vegada introduïdes les opcions que desitgem, tanquem la finestra de configuració, no cal donar-li abguardar en ningun lloc,ho fa automàticament.
+Recordem el que fa cadascuna de les opcions:
+
+- `--from markdown`, indica que el format d'orige és markdown
+- `--template eisvogel.tex`, indica que faça servir la plantilla 
+- `--toc` , indica que volem pàgina amb la taula de continguts
+- `--variable urlcolor=cyan`, indica que si apareix un link al document, el coloreje per ressaltar-lo de la resta del text 
+- `--listings`, indica que coloreje el codi font del nostre document 
+- `-N` , indica que numere automàticament les seccions i subseccions
+- `--pdf-engine xelatex`, el motor de conversió a utilitzar
+- `--filter pandoc-latex-environment`, el filtre per a les caixes _awesome_
+
+Una vegada introduïdes les opcions que desitgem, tanquem la finestra de configuració, no cal donar-li a guardar en ningun lloc, ho fa automàticament.
+
+::: tip
+
+Tot i que sembla molt engorrès, pensa que sols ho has de posar un cop. A partir d'ara la extensió s'encarregarà d'executar tot aquest comandament.
+
+:::
 
 # Plantilla per defecte de qualsevol document pdf
 
-Com haureu vist, una de les opcions de la configuració és *--template*, on li hem indicat que volem utilitzar la plantilla *eisvogel*. Si no la localitza, vos mostrarà un error com a que no l'ha pogut localitzar al generar el pdf. Per tal de que aquesta plantilla la localitze correctament a qualsevol document, l'hem d'ubicar en els directoris per defecte on pandoc va a buscar les plantilles. Per saber quin és eixe directori, ho podeu veure amb l'ordre:
+Com haureu vist i ja s'ha comentat a un document anterior, una de les opcions de la configuració és *--template*, on li hem indicat que volem utilitzar la plantilla *eisvogel*. Si no la localitza, vos mostrarà un error com a que no l'ha pogut localitzar al generar el pdf. Per tal de que aquesta plantilla la localitze correctament a qualsevol document, l'hem d'ubicar en els directoris per defecte on pandoc va a buscar les plantilles. Per saber quin és eixe directori, ho podeu veure amb l'ordre:
 
 ```bash
 pandoc --version
@@ -137,7 +155,7 @@ Per als que no esteu molt familiaritzats amb l'ús de la consola de Linux, el pu
 
 Per últim, sols ens queda generar l'arxiu pdf de forma automàtica des de l'extensió vscode-pandoc. 
 
-Per a això, amb un arxiu markdown obert, pulseu F1 o Ctl + Shift + P, i escriviu Pandoc. Vos ha de mostrar un quadre com el següent, i pulsem Intro. 
+Per a això, amb un arxiu markdown obert, pulseu `F1` o `Ctl + Shift + P`, i escriviu `pandoc`. Vos ha de mostrar un quadre com el següent, i pulsem Intro. 
 
 ![Pandoc Render](img/pandoc_render.png){width=10cm}
 
@@ -149,6 +167,12 @@ Si heu tingut qualsevol error, vscode vos el mostrarà amb informació de quin h
 - No troba la plantilla - Mira que està a la ruta per defecte
 - No troba alguna imatge - Comprova la ruta_a_imatge
 - Falta instal·lar alguna cosa - Instal·la el paquet que falte
+
+::: atencio
+
+El fet de compilar el document no el guarda en disc. És a dir, has de guardar el document markdown (CTRL + S)
+
+:::
 
 # Visualització de pdf directament amb vscode
 
