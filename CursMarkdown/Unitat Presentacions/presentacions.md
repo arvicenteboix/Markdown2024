@@ -6,7 +6,7 @@ theme: default
 paginate: true
 _paginate: false
 header: 'Presentacions utilitzant markdown/Marp'
-footer: 'CEFIRE València - Curs 22/23'
+footer: 'CEFIRE València - Curs 23/24'
 backgroundImage: url('images/prova2.png')
 style: |
   h1{
@@ -72,13 +72,15 @@ L'única cosa que heu d'instal·lar és l'extensió ***Marp for VS Code*** dels 
 ---
 # Començant amb Marp
 El primer que hauriem de fer és crear un document markdown. Al front matter (capçalera YAML) definirem que volem habilitar l'extensió marp per poder previsualitzar la presentació. Si previsualitzem el resultat, obtindrem una imatge com la següent.
+> Vigila l'espai en blanc desprès dels dos punt !!!
+
 
 ```markdown
 ---
 marp: true
 ---
 ```
-![w:600](images/marp-true.png)
+![h:250](images/marp-true.png)
 
 ---
 # Començant amb Marp
@@ -190,7 +192,7 @@ S’aplicaran a la pàgina on la definim i a les pàgines següents.
 | color           | Color de lletra de la diapositiva              |
 | backgroundColor | Color de fons de la diapositiva                |
 
-> :fire: Si alguna de les directives volem que s'apliquen a la diapositiva actual i no a les següent, posarem un guió baix davant d'elles. Per exemple, *_paginate: false*, faria que sols esta pàgina no es numere.
+> :fire: Si alguna de les directives volem que s'apliquen a la diapositiva actual i no a les següent, posarem un guió baix davant d'elles. Per exemple, *_paginate: false*, faria que **sols esta pàgina** no es numere.
 
 
 ---
@@ -232,7 +234,7 @@ Per exemple, per a insertar un emoji d'una cara somrient, utilitzarem `:smile:`.
 
 # Tractament d'imatges
 
-Ja sabem com introduir imatges utilitzant markdown, però ens interessa poder modificar el seu tamany per exemple.
+Ja sabem com introduir imatges utilitzant markdown, però ens interessa poder modificar el seu tamany o altres coses, per exemple.
 
 ---
 <!--
@@ -481,7 +483,7 @@ Si exporteu a html, veureu que vos crea un arxiu html de presentació per a ser 
 Si treballeu d'esta manera (altament recomanat), recordeu que la carpeta des d'on hem carregat les imatges o altres recursos han d'estar en la mateixa ruta des de la qual es van insertar perquè es carreguen de forma correcta, igual que feiem en markdown.
 
 ---
-# Marp-cli
+# Marp-cli (alternativa a VSCode)
 Si eres dels que preferix la consola, pots instal·lar l'aplicació de consola marp i utilitzar-la. S'ha d'instal·lar primer el *nodejs* (versió 12 almenys), després el seu gestor de paquest *npm* i per últim instal·lem *marp*. 
 
 > :fire: Instal·leu el *chromium-browser* sols en cas de no tindre el *Google-Chrome* instal·lat.
@@ -512,20 +514,20 @@ $ marp --pdf --allow-local-files <arxiu.md> # Per a passar a pdf
   }
 </style>
 # Baixem la mida dels pdf
-Els pdf ocupen molt perquè realment cada diapositiva és una imatge. Els podem reduir amb ghostscript. 
+Devegades els pdf ocupen molt perquè realment cada diapositiva és una imatge. Els podem reduir amb ghostscript. 
 > També els podem intentar baixar la qualitat exportant-los o imprimint a un arxiu pdf amb menor qualitat. Estes opcions les tindreu en el lector de pdfs, però depén dels sistemes que utilitzeu.
 ```bash
 $ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET
         -dBATCH -sOutputFile=pdf_reducido.pdf pdf_original.pdf 
 ```
-On -dPDFSETTINGS pot agafar els següents valors. Per a presentacions sobra amb qualitat screen.
-
+On `-dPDFSETTINGS` pot agafar els següents valors. Per a presentacions sobra amb qualitat screen.
+```
 dPDFSETTINGS=/**screen** (72 dpi, qualitat baixa)
 dPDFSETTINGS=/**ebook** (150 dpi, qualitat mitja)
 dPDFSETTINGS=/**printer** (300 dpi, alta qualitat)
 dPDFSETTINGS=/**prepress** (300 dpi, alta qualitat preservant el color)
 dPDFSETTINGS=/**default** (quasi idèntic a screen, però amb qualitat lleugerament superior)
-
+```
 ---
 # Comparació de quantitat de disc ocupat
 Exemple:
@@ -548,21 +550,26 @@ Busquem marp i html (a la vegada) i habilitem l'html.
 
 ![enable-html w:500](images/enable-html.png)
 
-Ara podem insertar, a banda de markdown, codi html.
+Ara podem insertar, a banda de markdown, codi html. 
+
+>No cal dir que això sols te sentit quan hem d'exportar a HTML
 
 ---
+
 # Insertem un vídeo local
 Si tenim una carpeta images que conté un arxiu *video.mp4*, l'insertem de la següent forma.
 ```html
+<div style="text-align: center">
 <video width="600" height="400" controls>
   <source src="video/planeta.mp4">
 El teu navegador no soporta l'etiqueta video. Actualitza'l.
-</video>
+</video></div>
 ```
-<video width="600" height="400" controls>
+<div style="text-align: center">
+<video width="400" height="300" controls>
   <source src="video/planeta.mp4" type="video/mp4">
 El teu navegador no soporta l'etiqueta video. Actualitza'l.
-</video>
+</video></div>
 
 ---
 # Insertem un video de youtube
@@ -571,22 +578,28 @@ La majoria de plataformes de video, ja et donen el codi html per poder-lo insert
 Per exemple, per a insertar el curt *Pipas* des de youtube, el busquem a la web de youtube i fem clic al botó *Comparteix*. Després seleccionem *<>Insereix* i copiem el codi que ens proporciona a la presentació.
 
 ```html
+<div style="text-align: center">
 <iframe width="560" height="315" 
   src="https://www.youtube.com/embed/H1v-bCyeIR4" 
   title="YouTube video player" frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowfullscreen>
 </iframe>
+</div>
 ```
 
 ---
+
+
 # Curtmetratge *Pipas*
+
+<div style="text-align: center">
 <iframe width="560" height="315" 
   src="https://www.youtube.com/embed/H1v-bCyeIR4" 
   title="YouTube video player" frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowfullscreen>
-</iframe>
+</iframe></div>
 
 ---
 # Insertem un clip d'àudio

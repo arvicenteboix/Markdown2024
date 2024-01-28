@@ -6,7 +6,7 @@ theme: default
 paginate: true
 _paginate: false
 header: 'Presentacions utilitzant markdown/Marp'
-footer: 'CEFIRE València - Curs 22/23'
+footer: 'CEFIRE València - Curs 23/24'
 backgroundImage: url('images/prova2.png')
 style: |
   h1{
@@ -55,10 +55,11 @@ h1 {
    1. Busca "Themes" i ves a l'apartat Markdown > Marp: Themes. 
    2. En "Add Item" posa la ruta relativa al tema, *tema.css*. Fixa't que ha de ser relativa a la carpeta que hem obert al Visual Studio Code. Tens l'opció de fer clic amb el botó dret al fitxer CSS i copiar la ruta relativa al porta-retalls.
    3. Ara ja pots utilitzar "el-meu-tema" com a tema en el markdown simplement posant *theme: el-meu-tema* al front-matter.
-  ![w:300](images/marp-theme.png)
+
+![w:250](images/marp-theme.png)
 
 ---
-4. Creem l'arxiu de presentació i configurem *el-meu-tema* com a tema de la presentaió.
+1. Creem l'arxiu de presentació i configurem *el-meu-tema* com a tema de la presentaió.
 
 ```yaml
 ---
