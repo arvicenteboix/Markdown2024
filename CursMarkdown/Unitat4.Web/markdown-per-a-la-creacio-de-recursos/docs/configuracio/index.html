@@ -8,8 +8,15 @@
       
       
       
+      
+        <link rel="prev" href="../introduccio/">
+      
+      
+        <link rel="next" href="../aules/">
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
@@ -17,15 +24,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2e8b5541.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -49,12 +58,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -74,7 +87,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Web estàtica amb mkdocs" class="md-header__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
       
@@ -83,6 +98,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -102,9 +118,36 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -113,12 +156,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -130,7 +176,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -160,6 +206,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Web estàtica amb mkdocs" class="md-nav__button md-logo" aria-label="Web estàtica amb mkdocs" data-md-component="logo">
@@ -175,14 +222,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../introduccio/" class="md-nav__link">
-        Introducció i  intal·lació
+        
+  
+  <span class="md-ellipsis">
+    Introducció i  intal·lació
+  </span>
+  
+
       </a>
     </li>
   
@@ -190,28 +242,39 @@
     
       
       
-      
-
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Configuració
+          
+  
+  <span class="md-ellipsis">
+    Configuració
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Configuració
+        
+  
+  <span class="md-ellipsis">
+    Configuració
+  </span>
+  
+
       </a>
       
         
@@ -231,7 +294,9 @@
       
         <li class="md-nav__item">
   <a href="#modifiquem-larxiu-mkdocsyml" class="md-nav__link">
-    Modifiquem l'arxiu mkdocs.yml
+    <span class="md-ellipsis">
+      Modifiquem l'arxiu mkdocs.yml
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Modifiquem l'arxiu mkdocs.yml">
@@ -239,21 +304,27 @@
         
           <li class="md-nav__item">
   <a href="#site_name" class="md-nav__link">
-    site_name
+    <span class="md-ellipsis">
+      site_name
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#docs_dir" class="md-nav__link">
-    docs_dir
+    <span class="md-ellipsis">
+      docs_dir
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#site_dir" class="md-nav__link">
-    site_dir
+    <span class="md-ellipsis">
+      site_dir
+    </span>
   </a>
   
 </li>
@@ -265,42 +336,105 @@
       
         <li class="md-nav__item">
   <a href="#pagines" class="md-nav__link">
-    Pàgines
+    <span class="md-ellipsis">
+      Pàgines
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#buscador" class="md-nav__link">
-    Buscador
+    <span class="md-ellipsis">
+      Buscador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversio-a-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversió a pdf
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#tema" class="md-nav__link">
-    Tema
+    <span class="md-ellipsis">
+      Tema
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#canviant-licona-de-la-nostra-web" class="md-nav__link">
-    Canviant l'icona de la nostra web
+    <span class="md-ellipsis">
+      Canviant l'icona de la nostra web
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#afegint-admonitions-caixes-de-lestil-awesomebox" class="md-nav__link">
-    Afegint admonitions (caixes de l'estil awesomebox)
+    <span class="md-ellipsis">
+      Afegint admonitions (caixes de l'estil awesomebox)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Afegint admonitions (caixes de l'estil awesomebox)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admonitions-tancades" class="md-nav__link">
+    <span class="md-ellipsis">
+      admonitions tancades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copiant-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiant codi font
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#construim-el-lloc-web" class="md-nav__link">
-    Construim el lloc web
+    <span class="md-ellipsis">
+      Construim el lloc web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arxiu-mkdocsyml-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arxiu mkdocs.yml base
+    </span>
   </a>
   
 </li>
@@ -315,14 +449,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../aules/" class="md-nav__link">
-        Allotgem la web a Aules
+        
+  
+  <span class="md-ellipsis">
+    Allotgem la web a Aules
+  </span>
+  
+
       </a>
     </li>
   
@@ -330,14 +469,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../github/" class="md-nav__link">
-        Allotgem la web a github
+        
+  
+  <span class="md-ellipsis">
+    Allotgem la web a github
+  </span>
+  
+
       </a>
     </li>
   
@@ -345,14 +489,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../aules%20vs%20github/" class="md-nav__link">
-        Docència: Aules o github?
+        
+  
+  <span class="md-ellipsis">
+    Docència: Aules o github?
+  </span>
+  
+
       </a>
     </li>
   
@@ -386,7 +535,9 @@
       
         <li class="md-nav__item">
   <a href="#modifiquem-larxiu-mkdocsyml" class="md-nav__link">
-    Modifiquem l'arxiu mkdocs.yml
+    <span class="md-ellipsis">
+      Modifiquem l'arxiu mkdocs.yml
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Modifiquem l'arxiu mkdocs.yml">
@@ -394,21 +545,27 @@
         
           <li class="md-nav__item">
   <a href="#site_name" class="md-nav__link">
-    site_name
+    <span class="md-ellipsis">
+      site_name
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#docs_dir" class="md-nav__link">
-    docs_dir
+    <span class="md-ellipsis">
+      docs_dir
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#site_dir" class="md-nav__link">
-    site_dir
+    <span class="md-ellipsis">
+      site_dir
+    </span>
   </a>
   
 </li>
@@ -420,42 +577,105 @@
       
         <li class="md-nav__item">
   <a href="#pagines" class="md-nav__link">
-    Pàgines
+    <span class="md-ellipsis">
+      Pàgines
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#buscador" class="md-nav__link">
-    Buscador
+    <span class="md-ellipsis">
+      Buscador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversio-a-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversió a pdf
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#tema" class="md-nav__link">
-    Tema
+    <span class="md-ellipsis">
+      Tema
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#canviant-licona-de-la-nostra-web" class="md-nav__link">
-    Canviant l'icona de la nostra web
+    <span class="md-ellipsis">
+      Canviant l'icona de la nostra web
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#afegint-admonitions-caixes-de-lestil-awesomebox" class="md-nav__link">
-    Afegint admonitions (caixes de l'estil awesomebox)
+    <span class="md-ellipsis">
+      Afegint admonitions (caixes de l'estil awesomebox)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Afegint admonitions (caixes de l'estil awesomebox)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admonitions-tancades" class="md-nav__link">
+    <span class="md-ellipsis">
+      admonitions tancades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copiant-codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiant codi font
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#construim-el-lloc-web" class="md-nav__link">
-    Construim el lloc web
+    <span class="md-ellipsis">
+      Construim el lloc web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arxiu-mkdocsyml-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arxiu mkdocs.yml base
+    </span>
   </a>
   
 </li>
@@ -470,15 +690,19 @@
           
           
             <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="configuracio.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              <article class="md-content__inner md-typeset">
                 
                   
 
 
 <h1 id="configuracio">Configuració</h1>
-<h2 id="modifiquem-larxiu-mkdocsyml">Modifiquem l'arxiu <em>mkdocs.yml</em></h2>
+<h2 id="modifiquem-larxiu-mkdocsyml">Modifiquem l'arxiu <strong><em>mkdocs.yml</em></strong></h2>
 <p>Tant l'mkdocs com el tema que escolliu tenen moltes possibilitats, però ací veurem la configuració bàsica. Si voleu configurar o personalitzar alguna cosa, haureu de consultar la documentació d'mkdocs o del tema segons el cas.</p>
 <p>En este enllaç està la documentació de la configuració d'mkdocs <a href="https://www.mkdocs.org/user-guide/configuration/">https://www.mkdocs.org/user-guide/configuration/</a>.</p>
+<div class="admonition tip atenció">
+<p class="admonition-title">Tip</p>
+<p>Al final de la unitat posarem de nou una versió completa i comentada d'un arxiu bàsic de configuració</p>
+</div>
 <h3 id="site_name">site_name</h3>
 <p>L'única configuració que és necessària per a servir la web és el <em>site_name</em>, que serà una cadena de text que definirà el títol de la pestanya del navegador i apareixerà en el menú de navegació. Diriem que és el nom que defineix la nostra web, per tant serà la primera configuració que modificarem.</p>
 <p>Per exemple, en el cas d'esta web, hem posat com a <em>site_name: Web estàtica amb mkdocs</em></p>
@@ -498,35 +722,57 @@
 <p>Anem a veure en este apartat com configurar noves pàgines a la nostra web. Seran accessibles a través del menú de navegació.</p>
 <p>El primer pas serà incorporar un nou arxiu .md amb contingut, per exemple, about.md a la carpeta docs.</p>
 <p>Després modificarem l'arxiu de configuració per afegir al menú de navegació les nostres pàgines de la forma següent:</p>
-<pre><code class="language-yaml">nav:
-    - Home: index.md
-    - About: about.md
-</code></pre>
-<p>Ara la pàgina tindrà l'aspecte següent:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">About</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">about.md</span>
+</code></pre></div></td></tr></table></div>
+Ara la pàgina tindrà l'aspecte següent:</p>
 <p><img alt="pagines" src="../img/pagines.png" /></p>
 <p>Pots observar que al menú de navegació ara tenim les opcions Home i About i també ens han aparegut unes fletxes de <em>Previous</em> i <em>Next</em> per poder navegar a través d'elles.</p>
 <p>Es poden crear submenús al menú de navegació, configurant el <em>mkdocs.yml</em>:</p>
-<pre><code class="language-yaml">nav:
-    - Home: index.md
-    - Tema 1:
-      - Apartat 1: tema1/apartat1.md
-      - Apartat 2: tema1/apartat2.md
-    - About: about.md
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Tema 1</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Apartat 1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tema1/apartat1.md</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Apartat 2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tema1/apartat2.md</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">About</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">about.md</span>
+</code></pre></div></td></tr></table></div>
 <p><img alt="submenus" src="../img/submenus.png" /></p>
 <h2 id="buscador">Buscador</h2>
 <p>Observeu que també disposem d'un buscador al menú de navegació que ens permetrà buscar a través del contingut de la web. </p>
 <div class="admonition note">
 <p class="admonition-title">Buscador</p>
 <p>Açò pot ser molt útil per als nostres alumnes a l'hora d'utilitzar els nostres recursos com a documentació de referència. Els permetrà localitzar ràpidament el contingut que busuqen.</p>
-<p>Observeu que ens trobarà totes les ocurrències del contingut buscat.</p>
+<p>Observeu que ens trobarà totes les ocurrències del contingut buscat en tot el lloc web, no sols en la pàgina actual.</p>
+</div>
+<h2 id="conversio-a-pdf">Conversió a pdf</h2>
+<p>Si es fixeu, podeu trobar un botó a la dreta del títol que ens permet guardar el contingut actual en un pdf:</p>
+<p><center><img alt="Exportar a PDF" src="../img/exportar-a-pdf.png" width="80%" /></center></p>
+<p>Això descarrega un arxiu PDF de la pàgina actual. Aquest PDF es genera en la construcció del lloc, afegint l'afegit que es mostra a continuació:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf-export</span><span class="w">  </span><span class="c1"># plugin per exportar a pdf</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition info consideracions">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Es recomana posar aquest plugin quan ho tingues tot composat, sinò en cada guardat que es fa mentre està el servei en marxa es generen tots els PDF, el que pot suposar una compilació lenta.</li>
+<li>El PDF generat, conte el contingut <code>ad-hoc</code>, sense cap mena de paginació ni resultat tan professional com l'obtingut a la unitat de PDF</li>
+</ul>
 </div>
 <h2 id="tema">Tema</h2>
 <p>Fins ara, hem utilitzat el tema per defecte per a renderitzar la pàgina, però existeixen altres temes per canviar l'aspecte a la nostra web, sense haver de canviar res al nostre contingut.</p>
 <p>Per canviar el tema, editem l'arxiu de configuració i afegim una línia com la següent:</p>
-<pre><code class="language-yaml">theme: readthedocs
-</code></pre>
-<p>En guardar l'arxiu, l'aspecte haurà canviat:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">readthedocs</span>
+</code></pre></div></td></tr></table></div>
+En guardar l'arxiu, l'aspecte haurà canviat:</p>
 <p>Tema readthedocs</p>
 <p><img alt="readthedocs" src="../img/readthedocs.png" /></p>
 <p>Tema mkdocs</p>
@@ -546,22 +792,30 @@
 <p><a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a></p>
 </div>
 <h2 id="canviant-licona-de-la-nostra-web">Canviant l'icona de la nostra web</h2>
-<p>Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom favicon.ico, mkdocs el detectarà i el canviarà automàticament.</p>
+<p>Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori <code>img</code> a la carpeta <code>docs</code> i guarda una icona amb el nom <code>favicon.ico</code>, mkdocs el detectarà i el canviarà automàticament.</p>
 <h2 id="afegint-admonitions-caixes-de-lestil-awesomebox">Afegint <em>admonitions</em> (caixes de l'estil awesomebox)</h2>
 <p>Per poder fer ús de les caixes per resaltar contingut, hem d'afegir el plugin admonition a l'arxiu de configuració:</p>
-<pre><code class="language-yaml">markdown_extensions:
-  - admonition
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
+</code></pre></div></td></tr></table></div>
 <p>A diferència d'awesomebox, les caixes a mkdocs es defineixen amb tres tancaments d'exclamació, i el contingut de dins la caixa va tabulat. Per exemple:</p>
-<pre><code class="language-markdown">!!!note &quot;Anotació&quot;
-    Esta part si que la podeu provar a casa.
-
-!!!warning &quot;Compte!&quot;
-    Aneu amb compte al realitzar esta part.
-
-!!!danger &quot;Perill!!&quot;
-    No proveu açò a casa.
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Markdown</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>!!!note &quot;Anotació&quot;
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    Esta part si que la podeu provar a casa.
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>!!!warning &quot;Compte!&quot;
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    Aneu amb compte al realitzar esta part.
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>!!!danger &quot;Perill!!&quot;
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>    No proveu açò a casa.
+</code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Anotació</p>
 <p>Esta part si que la podeu provar a casa.</p>
@@ -574,14 +828,113 @@
 <p class="admonition-title">Perill!!</p>
 <p>No proveu açò a casa.</p>
 </div>
+<h3 id="admonitions-tancades"><code>admonitions</code> tancades</h3>
+<p>Si volem colapsar i obrir caixes d'admonitions, podem conseguir l'efecte canviat les tres exclamacions (<code>!!!</code>) per tres interrogants (<code>???</code>). Tambe podem fer que la caixa estigui oberta inicialment afegint un símbols <code>+</code>.</p>
+<p>Per poder aconseguir-ho, hem d'activar aquest plugins, posant al <code>mkdocs.yml</code> el seguent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>markdown_extensions:
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  - admonition
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>  - attr_list
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  - pymdownx.details
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  - pymdownx.superfences
+</code></pre></div></td></tr></table></div>
+<p>Així si escrivim el següent codi,</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>??? note &quot;Caixa tancada que podem obrir&quot;
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    Aquesta caixa puc obrir-la i tancar-la
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>???+ example &quot;Caixa oberta que podem tancar&quot;
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>    Aquesta caixa puc tancar-la i obrir-la
+</code></pre></div></td></tr></table></div>
+<p>El resultat seran aquestes vistoses capses.</p>
+<details class="note">
+<summary>Caixa tancada que podem obrir</summary>
+<p>Aquesta caixa puc obrir-la i tancar-la</p>
+</details>
+<details class="example" open="open">
+<summary>Caixa oberta que podem tancar</summary>
+<p>Aquesta caixa puc tancar-la i obrir-la</p>
+</details>
+<h2 id="copiant-codi-font">Copiant codi font</h2>
+<p>Com be acabem de veure, dalt teniem una capsa amb codi font en format yaml. Quan blocs de codi pot resultar molt interessant el disposar d'un mecanisme per a copiar dit codi i porta-lo allà on vulguem (consola, un IDE, etc.)</p>
+<p>Per activar aquest boto de copia i altres coses, podem afegir al <code>mkdocs.yml</code> el següents comportaments, dins de l'opció del tema:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>theme:
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>  name: material
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  ...               # altres configuracions     
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>  features:
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    - content.code.copy
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    - content.code.select
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    - content.code.annotate
+</code></pre></div></td></tr></table></div>
+<p>Podem combinar-ho amb el plugin <code>pymdownx</code> d'abans per a numerar les línies, tot i això evitant el copiarles amb el botó anterior (clàssic problema al copiar i apegar codi des de arxius PDF)</p>
+<p>Combinant el vist aanteriorment podem combinar-ho per a aconseguir coses com la següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>??? question &quot;Quina és la estructura d&#39;un programa Python?&quot;
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    ```python
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>        import os
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        def main():
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>            # Ací el teu codi en python
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>            print(&quot;Hol, mon!&quot;)
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>        if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>            main()
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>    ```
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>    Copia i prova el teu codi a un IDE
+</code></pre></div></td></tr></table></div>
+<p>donant com a resultat:</p>
+<details class="question">
+<summary>Quina és la estructura d'un programa Python?</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>    <span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>        <span class="c1"># Ací el teu codi en python</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hol, mon!&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>        <span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Copia i prova el teu codi a un IDE</p>
+</details>
 <h2 id="construim-el-lloc-web">Construim el lloc web</h2>
 <p>Finalment, després d'haver comprovat al nostre ordinador que el resultat és l'esperat, construïm el lloc web, és a dir, el deixem enllestit per poder-lo penjar a un servidor amb l'ordre:</p>
-<pre><code class="language-sh">mkdocs build
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>mkdocs<span class="w"> </span>build
+</code></pre></div></td></tr></table></div>
 <p>Veuràs que es crea una carpeta <em>site</em> amb l'estructura següent:</p>
-<p><img alt="site" src="../img/site.png" /></p>
+<!--![site](img/site.png)-->
+
+<p><center><img alt="site" src="../img/site.png" width="50%" /></center></p>
 <p>Esta carpeta conté tots els arxius necessaris per servir la web, i és la carpeta que publiquen els servidors per a accedir a les seues respectives webs.</p>
-<h1 id="resum">Resum</h1>
+<h2 id="resum">Resum</h2>
 <ol>
 <li>Instal·lem mkdocs.</li>
 <li>Creem un nou projecte amb <code>mkdocs new "nom del projecte"</code>.</li>
@@ -591,6 +944,127 @@
 <li>Configurem el tema, el nom del lloc i la resta de configuracions que vulguem utilitzar.</li>
 <li>Construim el lloc amb <code>mkdocs build</code>.</li>
 </ol>
+<h2 id="arxiu-mkdocsyml-base">Arxiu <code>mkdocs.yml</code> base</h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span>
+<span class="normal"><a href="#__codelineno-12-30">30</a></span>
+<span class="normal"><a href="#__codelineno-12-31">31</a></span>
+<span class="normal"><a href="#__codelineno-12-32">32</a></span>
+<span class="normal"><a href="#__codelineno-12-33">33</a></span>
+<span class="normal"><a href="#__codelineno-12-34">34</a></span>
+<span class="normal"><a href="#__codelineno-12-35">35</a></span>
+<span class="normal"><a href="#__codelineno-12-36">36</a></span>
+<span class="normal"><a href="#__codelineno-12-37">37</a></span>
+<span class="normal"><a href="#__codelineno-12-38">38</a></span>
+<span class="normal"><a href="#__codelineno-12-39">39</a></span>
+<span class="normal"><a href="#__codelineno-12-40">40</a></span>
+<span class="normal"><a href="#__codelineno-12-41">41</a></span>
+<span class="normal"><a href="#__codelineno-12-42">42</a></span>
+<span class="normal"><a href="#__codelineno-12-43">43</a></span>
+<span class="normal"><a href="#__codelineno-12-44">44</a></span>
+<span class="normal"><a href="#__codelineno-12-45">45</a></span>
+<span class="normal"><a href="#__codelineno-12-46">46</a></span>
+<span class="normal"><a href="#__codelineno-12-47">47</a></span>
+<span class="normal"><a href="#__codelineno-12-48">48</a></span>
+<span class="normal"><a href="#__codelineno-12-49">49</a></span>
+<span class="normal"><a href="#__codelineno-12-50">50</a></span>
+<span class="normal"><a href="#__codelineno-12-51">51</a></span>
+<span class="normal"><a href="#__codelineno-12-52">52</a></span>
+<span class="normal"><a href="#__codelineno-12-53">53</a></span>
+<span class="normal"><a href="#__codelineno-12-54">54</a></span>
+<span class="normal"><a href="#__codelineno-12-55">55</a></span>
+<span class="normal"><a href="#__codelineno-12-56">56</a></span>
+<span class="normal"><a href="#__codelineno-12-57">57</a></span>
+<span class="normal"><a href="#__codelineno-12-58">58</a></span>
+<span class="normal"><a href="#__codelineno-12-59">59</a></span>
+<span class="normal"><a href="#__codelineno-12-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1"># Nom del lloc</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Web estàtica amb mkdocs</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1"># Carpeta amb el documents fot</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="nt">docs_dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;md&#39;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1"># Carpeta on es generarà el lloc web (mkdocs build)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="nt">site_dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;docs&#39;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="c1"># Adreça on s&#39;executa el server local (mkdocs serve)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="nt">dev_addr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost:4000</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="c1"># Navegació dels documents</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="c1"># nav:</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="c1">#   - Títol: Document.md</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Introducció i  intal·lació</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">introduccio.md</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Configuració</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configuracio.md</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Allotgem la web a Aules</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aules.md</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Allotgem la web a github</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.md</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Docència:</span><span class="nv"> </span><span class="s">Aules</span><span class="nv"> </span><span class="s">o</span><span class="nv"> </span><span class="s">github?&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aules vs github.md</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="c1"># Extenions</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span><span class="w">         </span><span class="c1"># permet afegir atributs a les etiquetes html </span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">  </span><span class="c1"># pymdownx és una col·leccio per escritura tècnica. S&#39;instal·la per defecte</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.details</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.highlight</span><span class="p">:</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="w">      </span><span class="nt">linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="w">      </span><span class="nt">anchor_linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">      </span><span class="nt">auto_title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34"></a>
+<a id="__codelineno-12-35" name="__codelineno-12-35"></a><span class="c1"># Tema a triar</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="nt">theme</span><span class="p">:</span><span class="w"> </span>
+<a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span><span class="w">  </span><span class="c1"># selecció del tema</span>
+<a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<a id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="w">   </span><span class="c1"># Boto que canvia a mode oscur</span>
+<a id="__codelineno-12-40" name="__codelineno-12-40"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<a id="__codelineno-12-41" name="__codelineno-12-41"></a><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<a id="__codelineno-12-42" name="__codelineno-12-42"></a><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-7</span><span class="w"> </span>
+<a id="__codelineno-12-43" name="__codelineno-12-43"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to dark mode</span>
+<a id="__codelineno-12-44" name="__codelineno-12-44"></a><span class="w">    </span><span class="c1"># Botó que canvia a mode clar</span>
+<a id="__codelineno-12-45" name="__codelineno-12-45"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span>
+<a id="__codelineno-12-46" name="__codelineno-12-46"></a><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<a id="__codelineno-12-47" name="__codelineno-12-47"></a><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-4</span>
+<a id="__codelineno-12-48" name="__codelineno-12-48"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to light mode</span>
+<a id="__codelineno-12-49" name="__codelineno-12-49"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<a id="__codelineno-12-50" name="__codelineno-12-50"></a><span class="w">    </span><span class="c1"># utilitats de copia de codi</span>
+<a id="__codelineno-12-51" name="__codelineno-12-51"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.copy</span><span class="w"> </span>
+<a id="__codelineno-12-52" name="__codelineno-12-52"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.select</span>
+<a id="__codelineno-12-53" name="__codelineno-12-53"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.annotate</span>
+<a id="__codelineno-12-54" name="__codelineno-12-54"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.footer</span><span class="w">       </span><span class="c1"># footer de la pagina, amb navegació</span>
+<a id="__codelineno-12-55" name="__codelineno-12-55"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.top</span><span class="w">    </span><span class="c1"># boto flotant de tornar a dalt </span>
+<a id="__codelineno-12-56" name="__codelineno-12-56"></a>
+<a id="__codelineno-12-57" name="__codelineno-12-57"></a><span class="c1"># Altres afegits</span>
+<a id="__codelineno-12-58" name="__codelineno-12-58"></a><span class="nt">plugins</span><span class="p">:</span>
+<a id="__codelineno-12-59" name="__codelineno-12-59"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span><span class="w">      </span><span class="c1"># plugin del quadre cerca</span>
+<a id="__codelineno-12-60" name="__codelineno-12-60"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf-export</span><span class="w">  </span><span class="c1"># plugin per exportar a pdf</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -603,45 +1077,55 @@
           
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
   
     
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        <a href="../introduccio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducció i  intal·lació" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
+          
+          <a href="../introduccio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introducció i  intal·lació">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
-              Introducció i  intal·lació
+              <div class="md-ellipsis">
+                Introducció i  intal·lació
+              </div>
             </div>
-          </div>
-        </a>
-      
-      
+          </a>
         
-        <a href="../aules/" class="md-footer__link md-footer__link--next" aria-label="Next: Allotgem la web a Aules" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
+        
+          
+          <a href="../aules/" class="md-footer__link md-footer__link--next" aria-label="Next: Allotgem la web a Aules">
+            <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
-              Allotgem la web a Aules
+              <div class="md-ellipsis">
+                Allotgem la web a Aules
+              </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -664,10 +1148,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer", "navigation.top"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
     
   </body>
