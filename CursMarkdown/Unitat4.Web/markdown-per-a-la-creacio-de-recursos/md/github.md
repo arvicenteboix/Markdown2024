@@ -7,7 +7,7 @@ Per a entendre què és Github, necessitem conéixer dos conceptes relacionats:
 - Sistema de control de versions
 - Git
 
-Un *sistema de control de versions* ajuda els desenvolupadors de contingut a rastrejar i gestionar els canvis que es produeixen en un projecte. És àmpliament utilitzat en el desenvolupament de *software*, però el podem aplicar a altres àmbits, com l'àmbit docent, per a gestionar els nostres apunts. 
+Un **sistema de control de versions** ajuda els desenvolupadors de contingut a rastrejar i gestionar els canvis que es produeixen en un projecte. És àmpliament utilitzat en el desenvolupament de *software*, però el podem aplicar a altres àmbits, com l'àmbit docent, per a gestionar els nostres apunts. 
 
 Anem a veure un exemple ...
 
@@ -96,10 +96,12 @@ Per a portar el codi hem de clonar el repositori al nostre disc dur. Utilitzarem
 
 Ens demanarà el repositori a clonar, ahí peguem la URL del nostre repositori. La podem obtindre del nostre repositori d'una de les dues següents formes, depenent si està completament buit o si ja conté algun arxiu (README.md i LICENSE).
 
-![Clonar repositori buit](img/github/clonar.png)
+<center>![Clonar repositori buit](img/github/clonar.png)</center>
+
 Clonació de repositori buit
 
-![Clonar repositori buit](img/github/clonar3.png)
+<center>![Clonar repositori buit](img/github/clonar3.png)</center>
+
 Clonació de repositori amb contingut
 
 
@@ -125,8 +127,9 @@ Ara, haurem de crear un projecte d'mkdocs dins la carpeta del repositori o copia
     Per defecte, els arxius markdown en un projecte mkdocs estan a la carpeta `docs`, mentre que la web es construeix a la carpeta `site`. Però github sols pot publicar webs que s'allotgen a l'arrel o a la carpeta `docs`. Per tant, els arxius del `build` han d'estar a l'arrel o a la carpeta docs.
 
     Per tant tenim dos possibles solucions:
+
     1. Executar el `mkdocs build` i copiar el contingut de la carpeta `site` a l'arrel del repositori (opció no recomanada).
-    2. Modificar la configuració per a que els arxius font en markdown estiguen en una altra carpeta i que el resultat del build estiga a la carpeta docs (opció recomanada).
+    2. Modificar la configuració per a que els arxius font en markdown estiguen en una altra carpeta i que el resultat del build estiga a la carpeta docs (opció recomanada i ja explicada així a la configuració).
 
     La segona solució és la recomanada, ja que ens permetrà tindre en un mateix repositori de github els fonts en markdown i la web construida.
 
@@ -190,7 +193,7 @@ Aneu a *Settings* i en l'apartat **Pages** indiqueu que voleu publicar de la ram
 
 En breu vos indicarà si la pàgina ja està publicada o si per contra hi ha hagut algun error. Si tot ha anat bé us indicarà l'adreça on s'ha publicat, que serà **https://nom_usuari.github.io/nom_repositori**. Comproveu que ja podeu navegar per ella i es veu tal qual la veieu al servidor local.
 
-Esta web està publicada a [https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/](https://cursos-cefire.github.io/markdown-per-a-la-creacio-de-recursos/) i el seu repositori corresponent amb tots els arxius font, arxiu de configuració i llicència el trobareu a [https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/](https://github.com/cursos-cefire/markdown-per-a-la-creacio-de-recursos/).
+Esta web està publicada a <https://arvicenteboix.github.io/Markdown2024> i el seu repositori corresponent amb tots els arxius font, arxiu de configuració i llicència el trobareu a <https://github.com/arvicenteboix/Markdown2024>.
 
 !!!warning "Treball en local i en remot"
     Els arxius es poden modificar tant per web com en local, però recomanem fer-ho en local, ja que necessitem fer un build per a publicar els canvis. 

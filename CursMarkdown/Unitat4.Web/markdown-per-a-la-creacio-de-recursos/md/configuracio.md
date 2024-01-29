@@ -1,10 +1,13 @@
 # Configuració
 
-## Modifiquem l'arxiu *mkdocs.yml*
+## Modifiquem l'arxiu ***mkdocs.yml***
 
 Tant l'mkdocs com el tema que escolliu tenen moltes possibilitats, però ací veurem la configuració bàsica. Si voleu configurar o personalitzar alguna cosa, haureu de consultar la documentació d'mkdocs o del tema segons el cas.
 
 En este enllaç està la documentació de la configuració d'mkdocs [https://www.mkdocs.org/user-guide/configuration/](https://www.mkdocs.org/user-guide/configuration/).
+
+!!! tip Atenció
+    Al final de la unitat posarem de nou una versió completa i comentada d'un arxiu bàsic de configuració
 
 ### site_name
 
@@ -65,7 +68,25 @@ Observeu que també disposem d'un buscador al menú de navegació que ens permet
 !!!note "Buscador" 
     Açò pot ser molt útil per als nostres alumnes a l'hora d'utilitzar els nostres recursos com a documentació de referència. Els permetrà localitzar ràpidament el contingut que busuqen.
 
-    Observeu que ens trobarà totes les ocurrències del contingut buscat.
+    Observeu que ens trobarà totes les ocurrències del contingut buscat en tot el lloc web, no sols en la pàgina actual.
+
+## Conversió a pdf
+
+Si es fixeu, podeu trobar un botó a la dreta del títol que ens permet guardar el contingut actual en un pdf:
+
+<center>![Exportar a PDF](img/exportar-a-pdf.png){width=80%}</center>
+
+Això descarrega un arxiu PDF de la pàgina actual. Aquest PDF es genera en la construcció del lloc, afegint l'afegit que es mostra a continuació:
+
+```yaml
+plugins:
+  - pdf-export  # plugin per exportar a pdf
+```
+
+!!! info Consideracions
+
+    - Es recomana posar aquest plugin quan ho tingues tot composat, sinò en cada guardat que es fa mentre està el servei en marxa es generen tots els PDF, el que pot suposar una compilació lenta.
+    - El PDF generat, conte el contingut `ad-hoc`, sense cap mena de paginació ni resultat tan professional com l'obtingut a la unitat de PDF
 
 ## Tema
 
@@ -107,7 +128,7 @@ Tema material
 
 ## Canviant l'icona de la nostra web
 
-Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori img a la carpeta docs i guarda una icona amb el nom favicon.ico, mkdocs el detectarà i el canviarà automàticament.
+Per defecte, mkdocs utilitza la seua propia icona. Si volem utilitzar una icona diferent, crea un directori `img` a la carpeta `docs` i guarda una icona amb el nom `favicon.ico`, mkdocs el detectarà i el canviarà automàticament.
 
 ## Afegint *admonitions* (caixes de l'estil awesomebox)
 
@@ -140,6 +161,90 @@ A diferència d'awesomebox, les caixes a mkdocs es defineixen amb tres tancament
 !!!danger "Perill!!"
     No proveu açò a casa.
 
+### `admonitions` tancades
+
+Si volem colapsar i obrir caixes d'admonitions, podem conseguir l'efecte canviat les tres exclamacions (`!!!`) per tres interrogants (`???`). Tambe podem fer que la caixa estigui oberta inicialment afegint un símbols `+`.
+
+Per poder aconseguir-ho, hem d'activar aquest plugins, posant al `mkdocs.yml` el seguent:
+
+```yml
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+```
+
+Així si escrivim el següent codi,
+
+```
+??? note "Caixa tancada que podem obrir"
+    Aquesta caixa puc obrir-la i tancar-la
+
+???+ example "Caixa oberta que podem tancar"
+    Aquesta caixa puc tancar-la i obrir-la
+```
+
+El resultat seran aquestes vistoses capses.
+
+??? note "Caixa tancada que podem obrir"
+    Aquesta caixa puc obrir-la i tancar-la
+
+???+ example "Caixa oberta que podem tancar"
+    Aquesta caixa puc tancar-la i obrir-la
+
+## Copiant codi font
+
+Com be acabem de veure, dalt teniem una capsa amb codi font en format yaml. Quan blocs de codi pot resultar molt interessant el disposar d'un mecanisme per a copiar dit codi i porta-lo allà on vulguem (consola, un IDE, etc.)
+
+Per activar aquest boto de copia i altres coses, podem afegir al `mkdocs.yml` el següents comportaments, dins de l'opció del tema:
+
+```yml
+theme:
+  name: material
+  ...               # altres configuracions     
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+```
+
+Podem combinar-ho amb el plugin `pymdownx` d'abans per a numerar les línies, tot i això evitant el copiarles amb el botó anterior (clàssic problema al copiar i apegar codi des de arxius PDF)
+
+Combinant el vist aanteriorment podem combinar-ho per a aconseguir coses com la següent:
+
+```
+??? question "Quina és la estructura d'un programa Python?"
+
+    ```python
+        import os
+        def main():
+            # Ací el teu codi en python
+            print("Hol, mon!")
+
+        if __name__ == "__main__":
+            main()
+    ```
+    
+    Copia i prova el teu codi a un IDE
+```
+
+donant com a resultat:
+
+??? question "Quina és la estructura d'un programa Python?"
+
+    ```python
+        import os
+        def main():
+            # Ací el teu codi en python
+            print("Hol, mon!")
+
+        if __name__ == "__main__":
+            main()
+    ```
+    
+    Copia i prova el teu codi a un IDE
+
 ## Construim el lloc web
 
 Finalment, després d'haver comprovat al nostre ordinador que el resultat és l'esperat, construïm el lloc web, és a dir, el deixem enllestit per poder-lo penjar a un servidor amb l'ordre:
@@ -150,11 +255,13 @@ mkdocs build
 
 Veuràs que es crea una carpeta *site* amb l'estructura següent:
 
-![site](img/site.png)
+<!--![site](img/site.png)-->
+
+<center>![site](img/site.png){width=50%}</center>
 
 Esta carpeta conté tots els arxius necessaris per servir la web, i és la carpeta que publiquen els servidors per a accedir a les seues respectives webs.
 
-# Resum
+## Resum
 
 1. Instal·lem mkdocs.
 2. Creem un nou projecte amb `mkdocs new "nom del projecte"`.
@@ -163,3 +270,68 @@ Esta carpeta conté tots els arxius necessaris per servir la web, i és la carpe
 5. Enllacem els diferents arxius al menú de navegació modificant l'arxiu mkdocs.yml.
 6. Configurem el tema, el nom del lloc i la resta de configuracions que vulguem utilitzar.
 7. Construim el lloc amb `mkdocs build`.
+
+## Arxiu `mkdocs.yml` base
+
+```yaml
+# Nom del lloc
+site_name: Web estàtica amb mkdocs
+
+# Carpeta amb el documents fot
+docs_dir: 'md'
+
+# Carpeta on es generarà el lloc web (mkdocs build)
+site_dir: 'docs'
+
+# Adreça on s'executa el server local (mkdocs serve)
+dev_addr: localhost:4000
+
+# Navegació dels documents
+# nav:
+#   - Títol: Document.md
+nav:
+  - Introducció i  intal·lació: introduccio.md
+  - Configuració: configuracio.md
+  - Allotgem la web a Aules: aules.md
+  - Allotgem la web a github: github.md
+  - "Docència: Aules o github?": aules vs github.md
+
+# Extenions
+markdown_extensions:
+  - admonition
+  - attr_list         # permet afegir atributs a les etiquetes html 
+  # pymdownx és una col·leccio per escritura tècnica. S'instal·la per defecte
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+
+# Tema a triar
+theme: 
+  name: material  # selecció del tema
+  palette:
+   # Boto que canvia a mode oscur
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Botó que canvia a mode clar
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # utilitats de copia de codi
+    - content.code.copy 
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer       # footer de la pagina, amb navegació
+    - navigation.top    # boto flotant de tornar a dalt 
+
+# Altres afegits
+plugins:
+  - search      # plugin del quadre cerca
+  - pdf-export  # plugin per exportar a pdf
+```

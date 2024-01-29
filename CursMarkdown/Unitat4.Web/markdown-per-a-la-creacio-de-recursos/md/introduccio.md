@@ -57,7 +57,7 @@ Al crear un nou projecte, amb mkdocs, observareu que s'ha creat una estructura c
 └── mkdocs.yml
 ```
 
-- L'arxiu **mkdocs.yml** és l'arxiu de configuració de tot el projecte.
+- L'arxiu **mkdocs.yml** és l'arxiu de configuració de tot el projecte. Ve a ser l'equivalent a la capçalera yaml que comentavem o **front-matter**.
 - La carpeta **docs** contindrà els nostres documents en format markdown.
 - L'arxiu **index.md** és un arxiu de mostra que es mostrarà en format web al accedir a l'arrel del lloc web.
 
