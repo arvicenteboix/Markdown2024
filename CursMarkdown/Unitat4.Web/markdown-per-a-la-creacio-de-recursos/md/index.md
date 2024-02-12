@@ -7,6 +7,12 @@
 Professors:
 
   - Joan Gerard Camarena
+  - Alfredo Vicente Boix
+
+Material creat per:
+
+  - Joan Gerard Camarena
   - Ferran Cunyat
   - Jose Alfredo Murcia
+
 
